@@ -1,9 +1,9 @@
-import {settingsKey} from "../settings.js";
+import { settingsKey } from "../settings.js";
 
 // Tint the source door red when a locked alert is hovered
 export function onRenderChatMessage(message, html, data) {
 	// Tint the door that generated this message
-	const source = message.flags.smartdoors?.source;
+	const source = message.flags.doorcheck?.source;
 	if (!source) return;
 
 	// Tint on mouse enter
@@ -25,7 +25,7 @@ export function onRenderChatMessage(message, html, data) {
 	html.on("mouseleave", mouseLeave);
 
 	// Localize the message
-	html.find(".message-content")[0].innerText = game.i18n.localize("smart-doors.ui.lockedDoorAlert");
+	html.find(".message-content")[0].innerText = game.i18n.localize("door-check.ui.lockedDoorAlert");
 }
 
 // Creates a chat message stating that a player tried to open a locked door
@@ -45,10 +45,10 @@ export function onDoorLeftClick() {
 	// Create and send the chat message
 	const message = {};
 	message.user = game.user.id;
-	if (game.user.character) message.speaker = {actor: game.user.character};
-	message.content = game.i18n.localize("smart-doors.ui.lockedDoorAlert");
+	if (game.user.character) message.speaker = { actor: game.user.character };
+	message.content = game.i18n.localize("door-check.ui.lockedDoorAlert");
 	message.sound = CONFIG.sounds.lock;
-	message.flags = {smartdoors: {source: {wall: this.wall.id, scene: this.wall.scene.id}}};
+	message.flags = { doorcheck: { source: { wall: this.wall.id, scene: this.wall.scene.id } } };
 	ChatMessage.create(message);
 	return true;
 }

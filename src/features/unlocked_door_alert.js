@@ -3,7 +3,7 @@ import { settingsKey } from "../settings.js";
 // Tint the source door green when an unlocked alert is hovered
 export function onRenderChatMessage(message, html, data) {
 	// Tint the door that generated this message
-	const source = message.flags.smartdoors?.source;
+	const source = message.flags.doorcheck?.source;
 	if (!source) return;
 
 	// Tint on mouse enter
@@ -25,7 +25,7 @@ export function onRenderChatMessage(message, html, data) {
 	html.on("mouseleave", mouseLeave);
 
 	// Localize the message
-	html.find(".message-content")[0].innerText = game.i18n.localize("smart-doors.ui.unlockedDoorAlert");
+	html.find(".message-content")[0].innerText = game.i18n.localize("door-check.ui.unlockedDoorAlert");
 }
 
 // Creates a chat message stating that a player tried to open an unlocked door
@@ -46,9 +46,9 @@ export function onDoorRightClick() {
 	const message = {};
 	message.user = game.user.id;
 	if (game.user.character) message.speaker = { actor: game.user.character };
-	message.content = game.i18n.localize("smart-doors.ui.unlockedDoorAlert");
+	message.content = game.i18n.localize("door-check.ui.unlockedDoorAlert");
 	message.sound = CONFIG.sounds.lock;
-	message.flags = { smartdoors: { source: { wall: this.wall.id, scene: this.wall.scene.id } } };
+	message.flags = { doorcheck: { source: { wall: this.wall.id, scene: this.wall.scene.id } } };
 	ChatMessage.create(message);
 	return true;
 }

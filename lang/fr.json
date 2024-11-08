@@ -1,5 +1,5 @@
 {
-	"smart-doors": {
+	"door-check": {
 		"settings": {
 			"doorControlSizeFactor": {
 				"name": "Facteur de taille de commande de porte",

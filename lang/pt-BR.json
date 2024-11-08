@@ -1,5 +1,5 @@
 {
-	"smart-doors": {
+	"door-check": {
 		"keybindings": {
 			"toggleSecretDoor": {
 				"name": "Alternar porta secreta",

@@ -49,6 +49,5 @@
 	"download": "https://github.com/AutoDave91/Foundry-Check-Door/archive/refs/heads/main.zip",
 	"readme": "https://github.com/AutoDave91/foundryvtt-check-door/blob/main/README.md",
 	"changelog": "https://github.com/AutoDave91/foundryvtt-check-door/blob/main/CHANGELOG.md",
-	"bugs": "https://github.com/AutoDave91/foundryvtt-check-door/issues",
-	"allowBugReporter": true
+	"bugs": "https://github.com/AutoDave91/foundryvtt-check-door/issues"
 }

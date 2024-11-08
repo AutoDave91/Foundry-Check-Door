@@ -1,10 +1,10 @@
-import {libWrapper} from "../../lib/libwrapper_shim.js";
-import {settingsKey} from "../settings.js";
+import { libWrapper } from "../../lib/libwrapper_shim.js";
+import { settingsKey } from "../settings.js";
 
 // Adjust the repositioning formula for the door controls
 export function hookDoorControlReposition() {
 	libWrapper.register(
-		"smart-doors",
+		"door-check",
 		"DoorControl.prototype.reposition",
 		function () {
 			let gridSize = this.wall.scene.grid.size;
