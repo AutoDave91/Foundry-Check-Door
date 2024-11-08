@@ -45,7 +45,7 @@
 		}
 	],
 	"url": "https://github.com/AutoDave91/foundryvtt-check-door",
-	"manifest": "https://raw.githubusercontent.com/AutoDave91/foundryvtt-check-door/main/module.json",
+	"manifest": "https://raw.githubusercontent.com/AutoDave91/Foundry-Check-Door/main/module.json",
 	"download": "https://github.com/AutoDave91/Foundry-Check-Door/archive/refs/heads/main.zip",
 	"readme": "https://github.com/AutoDave91/foundryvtt-check-door/blob/main/README.md",
 	"changelog": "https://github.com/AutoDave91/foundryvtt-check-door/blob/main/CHANGELOG.md",

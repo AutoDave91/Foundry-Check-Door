@@ -1,4 +1,4 @@
-import {settingsKey} from "./settings.js";
+import { settingsKey } from "./settings.js";
 
 const currentDataVersion = "1.1.0";
 
@@ -14,7 +14,7 @@ export function performMigrations() {
 	if (dataVersion === "1.0.0") {
 		dataVersion = "1.1.0";
 		ui.notifications.info(
-			game.i18n.format("smart-doors.ui.messages.migrating", {version: dataVersion}),
+			game.i18n.format("check-door.ui.messages.migrating", { version: dataVersion }),
 		);
 
 		// Make a dictionary that maps all door ids to their scenes
@@ -28,31 +28,31 @@ export function performMigrations() {
 
 		// Migrate all messages that have a (wall) source id
 		game.messages.forEach(async message => {
-			const wallId = message.flags.smartdoors?.sourceId;
+			const wallId = message.flags.doorcheck?.sourceId;
 			if (!wallId) return;
 			const flags = message.flags;
-			delete flags.smartdoors.sourceId;
+			delete flags.doorcheck.sourceId;
 			const scene = walls[wallId];
 			// If there is no wall with this id anymore we can drop the value. It has no purpose anymore
 			if (!scene) {
-				if (!message.flags.smartdoors) delete flags.smartdoors;
+				if (!message.flags.doorcheck) delete flags.doorcheck;
 			} else {
 				// Assign the id and the scene id to the new data structure
-				flags.smartdoors.source = {wall: wallId, scene: scene};
+				flags.doorcheck.source = { wall: wallId, scene: scene };
 			}
 
 			// We have to disable recursive here so deleting keys will actually work
-			message.update({flags: flags}, {diff: false, recursive: false});
+			message.update({ flags: flags }, { diff: false, recursive: false });
 		});
 
 		game.settings.set(settingsKey, "dataVersion", dataVersion);
 		ui.notifications.info(
-			game.i18n.format("smart-doors.ui.messages.migrationDone", {version: dataVersion}),
+			game.i18n.format("check-door.ui.messages.migrationDone", { version: dataVersion }),
 		);
 	}
 	if (dataVersion != currentDataVersion)
 		ui.notifications.error(
-			game.i18n.format("smart-doors.ui.messages.unknownVersion", {version: dataVersion}),
-			{permanent: true},
+			game.i18n.format("check-door.ui.messages.unknownVersion", { version: dataVersion }),
+			{ permanent: true },
 		);
 }

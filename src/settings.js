@@ -1,4 +1,4 @@
-export const settingsKey = "smart-doors";
+export const settingsKey = "check-door";
 
 function reloadGM() {
 	if (game.user.isGM) delayedReload();
@@ -15,18 +15,9 @@ export function registerSettings() {
 		type: String,
 		default: "fresh install",
 	});
-	game.settings.register(settingsKey, "doorControlSizeFactor", {
-		name: "smart-doors.settings.doorControlSizeFactor.name",
-		hint: "smart-doors.settings.doorControlSizeFactor.hint",
-		scope: "client",
-		config: true,
-		type: Number,
-		default: 1.5,
-		onChange: delayedReload,
-	});
 	game.settings.register(settingsKey, "highlightSecretDoors", {
-		name: "smart-doors.settings.highlightSecretDoors.name",
-		hint: "smart-doors.settings.highlightSecretDoors.hint",
+		name: "check-door.settings.highlightSecretDoors.name",
+		hint: "check-door.settings.highlightSecretDoors.hint",
 		scope: "world",
 		config: true,
 		type: Boolean,
@@ -34,24 +25,16 @@ export function registerSettings() {
 		onChange: reloadGM,
 	});
 	game.settings.register(settingsKey, "lockedDoorAlert", {
-		name: "smart-doors.settings.lockedDoorAlert.name",
-		hint: "smart-doors.settings.lockedDoorAlert.hint",
+		name: "check-door.settings.lockedDoorAlert.name",
+		hint: "check-door.settings.lockedDoorAlert.hint",
 		scope: "world",
 		config: true,
 		type: Boolean,
 		default: true,
 	});
 	game.settings.register(settingsKey, "unlockedDoorAlert", {
-		name: "smart-doors.settings.unlockedDoorAlert.name",
-		hint: "smart-doors.settings.unlockedDoorAlert.hint",
-		scope: "world",
-		config: true,
-		type: Boolean,
-		default: true,
-	});
-	game.settings.register(settingsKey, "synchronizedDoors", {
-		name: "smart-doors.settings.synchronizedDoors.name",
-		hint: "smart-doors.settings.synchronizedDoors.hint",
+		name: "check-door.settings.unlockedDoorAlert.name",
+		hint: "check-door.settings.unlockedDoorAlert.hint",
 		scope: "world",
 		config: true,
 		type: Boolean,
