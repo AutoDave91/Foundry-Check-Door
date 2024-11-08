@@ -45,10 +45,10 @@
 		}
 	],
 	"url": "https://github.com/AutoDave91/foundryvtt-check-doors",
-	"manifest": "https://raw.githubusercontent.com/AutoDave91/foundryvtt-check-doors/master/module.json",
-	"download": "https://github.com/AutoDave91/foundryvtt-check-doors/archive/refs/heads/master.zip",
-	"readme": "https://github.com/AutoDave91/foundryvtt-check-doors/blob/master/README.md",
-	"changelog": "https://github.com/AutoDave91/foundryvtt-check-doors/blob/master/CHANGELOG.md",
+	"manifest": "https://raw.githubusercontent.com/AutoDave91/foundryvtt-check-doors/main/module.json",
+	"download": "https://github.com/AutoDave91/foundryvtt-check-doors/archive/refs/heads/main.zip",
+	"readme": "https://github.com/AutoDave91/foundryvtt-check-doors/blob/main/README.md",
+	"changelog": "https://github.com/AutoDave91/foundryvtt-check-doors/blob/main/CHANGELOG.md",
 	"bugs": "https://github.com/AutoDave91/foundryvtt-check-doors/issues",
 	"allowBugReporter": true
 }
