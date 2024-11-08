@@ -1,5 +1,5 @@
 {
-	"id": "check-doors",
+	"id": "check-door",
 	"title": "Check Doors",
 	"description": "Makes doors smarter. Allows doors to synchronize across multiple scenes and sends chat messages when players try to open locked doors.",
 	"version": "1.4.1",
@@ -44,11 +44,11 @@
 			"path": "lang/pt-BR.json"
 		}
 	],
-	"url": "https://github.com/AutoDave91/foundryvtt-check-doors",
-	"manifest": "https://raw.githubusercontent.com/AutoDave91/foundryvtt-check-doors/main/module.json",
-	"download": "https://github.com/AutoDave91/foundryvtt-check-doors/archive/refs/heads/main.zip",
-	"readme": "https://github.com/AutoDave91/foundryvtt-check-doors/blob/main/README.md",
-	"changelog": "https://github.com/AutoDave91/foundryvtt-check-doors/blob/main/CHANGELOG.md",
-	"bugs": "https://github.com/AutoDave91/foundryvtt-check-doors/issues",
+	"url": "https://github.com/AutoDave91/foundryvtt-check-door",
+	"manifest": "https://raw.githubusercontent.com/AutoDave91/foundryvtt-check-door/main/module.json",
+	"download": "https://github.com/AutoDave91/Foundry-Check-Door/archive/refs/heads/main.zip",
+	"readme": "https://github.com/AutoDave91/foundryvtt-check-door/blob/main/README.md",
+	"changelog": "https://github.com/AutoDave91/foundryvtt-check-door/blob/main/CHANGELOG.md",
+	"bugs": "https://github.com/AutoDave91/foundryvtt-check-door/issues",
 	"allowBugReporter": true
 }
